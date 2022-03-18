@@ -5,9 +5,9 @@ pragma solidity ^0.4.24;
 //
 // Symbol        : {{Rdp}}  /** ชื่อเหรียญที่เราต้องการ */
 // Name          : {{Rdp Token}}  /** ชื่อเหรียญ*/
-// Total supply  : {{1000000}} /** ราคาเหรียญ*/
-// Decimals      : {{4}}   /** ทศนิยม */
-// Owner Account : {{0x9e4Da3aA695511d63514D9Cef026fcac82fB716A}} /** บัญชีตัวเองให้คัดลอกที่ METAMASK ตรง Account */
+// Total supply  : {{1000000}} /** ราคาของเหรียญ*/
+// Decimals      : {{4}}   /** จุดทศนิยมที่เราต้องการ */
+// Owner Account : {{0x9e4Da3aA695511d63514D9Cef026fcac82fB716A}} /** บัญชีตัวเองให้คัดลอกใน METAMASK ตรง Account มาใส่ */
 //
 // Enjoy.
 //
@@ -86,10 +86,10 @@ contract RdpToken is ERC20Interface, SafeMath {  /** สัญญาของเ
     constructor() public {
         symbol = "Rdp"; /** ชื่อเหรียญที่เราต้องการ */
         name = "Rdp Token";  /** ชื่อเหรียญ*/
-        decimals = 4;  /** ทศนิยม */
+        decimals = 4;  /** จุดทศนิยม */
         _totalSupply = 1000000; /** ราคาเหรียญ*/
-        balances[0x9e4Da3aA695511d63514D9Cef026fcac82fB716A] = _totalSupply; /** บัญชีตัวเองให้คัดลอกที่ METAMASK ตรง Account */
-        emit Transfer(address(0), 0x9e4Da3aA695511d63514D9Cef026fcac82fB716A, _totalSupply); /** โอนที่อยู่ โดยให้คัดลอกที่ METAMASK ตรง Account */
+        balances[0x9e4Da3aA695511d63514D9Cef026fcac82fB716A] = _totalSupply; /** บัญชีตัวเองให้คัดลอกที่ METAMASK ตรง Account มาใส่ */
+        emit Transfer(address(0), 0x9e4Da3aA695511d63514D9Cef026fcac82fB716A, _totalSupply); /** โอนที่อยู่ โดยให้คัดลอกที่ METAMASK ตรง Account มาใส่โดยให้ตรงกันกับด้านบนที่ทำการกรอกไปข้างต้น */
     }
 
 
